@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/jobsFragment">
+
+    <fragment
+        android:id="@+id/jobsFragment"
+        android:name="com.imran.jobmob.ui.job.JobsFragment"
+        android:label="JobsFragment" >
+        <action
+            android:id="@+id/action_jobsFragment_to_jobInfoFragment"
+            app:destination="@id/jobInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/jobInfoFragment"
+        android:name="com.imran.jobmob.ui.job.JobInfoFragment"
+        android:label="JobInfoFragment" />
+</navigation>
