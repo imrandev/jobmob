@@ -1,6 +1,6 @@
 # jobmob
 
-#Technology
+# Technology
 * MVVM Architecture
 * Retrofit with offline cache
 
