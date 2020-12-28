@@ -7,6 +7,7 @@ import com.imran.jobmob.model.Jobs
 import com.imran.jobmob.network.EnqueueResponse
 import com.imran.jobmob.network.RetrofitClient
 import com.imran.jobmob.utils.Constant
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 
 
@@ -19,6 +20,8 @@ class JobRepository {
 
     fun findJobs(context: Context) = flow<MutableLiveData<Jobs>> {
         emit(fetchJobsFromApi(context))
+    }.catch {
+        Log.d(TAG, "findJobs: " + it.message)
     }
 
     private fun fetchJobsFromApi(context: Context) : MutableLiveData<Jobs> {

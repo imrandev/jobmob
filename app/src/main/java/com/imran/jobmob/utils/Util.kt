@@ -4,7 +4,6 @@ import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 
-
 /**
  * Created by Imran Khan on 12/25/2020.
  * Email : context.imran@gmail.com
@@ -32,7 +31,7 @@ object DateUtil {
         return formattedDate
     }
 
-    private fun getDayOfMonthSuffix(n: Int): String? {
+    private fun getDayOfMonthSuffix(n: Int): String {
         return if (n in 11..13) {
             String.format("%sth", n)
         } else when (n % 10) {
